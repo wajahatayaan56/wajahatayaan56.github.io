@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wajahat Ali | Data Analyst &amp; IT Specialist</title>
+<meta name="description" content="Portfolio of Wajahat Ali: IT support, networking and data analysis in Riyadh.">
+<style>
+:root{--bg:#f4f7fb;--card:#fff;--ink:#14213d;--mute:#5b6478;--line:#dde4ef;--a:#0d9488;--a2:#6366f1;--chip:#e3f6f3;--glow:rgba(20,184,166,.18);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1126;--card:#111b3a;--ink:#e8edf9;--mute:#9aa8c7;--line:#223060;--a:#2dd4bf;--a2:#818cf8;--chip:#10304a;--glow:rgba(45,212,191,.15);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0a1126;--card:#111b3a;--ink:#e8edf9;--mute:#9aa8c7;--line:#223060;--a:#2dd4bf;--a2:#818cf8;--chip:#10304a;--glow:rgba(45,212,191,.15);color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+a{color:inherit;text-decoration:none}
+.w{max-width:1040px;margin:0 auto;padding:0 20px}
+#bar{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:3px;width:0;background:linear-gradient(90deg,var(--a),var(--a2));z-index:70}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;backdrop-filter:blur(12px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--line)}
+nav .w{display:flex;align-items:center;gap:6px;height:56px}
+.logo{font-weight:800;font-size:18px;margin-right:auto}.logo b{color:var(--a)}
+nav a.l{padding:6px 11px;border-radius:99px;font-size:13.5px;color:var(--mute);transition:.25s}
+nav a.l:hover,nav a.l.on{color:var(--ink);background:var(--chip)}
+#th{border:1px solid var(--line);background:var(--card);color:var(--ink);width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:15px;transition:.3s}#th:hover{transform:rotate(25deg)}
+@media(max-width:640px){nav a.l:nth-of-type(n+3){display:none}}
+.hero{position:relative;padding:72px 0 64px;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;animation:fl 14s ease-in-out infinite alternate;z-index:0}
+.b1{width:340px;height:340px;background:var(--a);top:-90px;right:-60px}
+.b2{width:300px;height:300px;background:var(--a2);bottom:-120px;left:-80px;animation-delay:-6s}
+@keyframes fl{to{transform:translate(40px,30px) scale(1.15)}}
+.hg{position:relative;z-index:1;display:grid;grid-template-columns:1.5fr 1fr;gap:36px;align-items:center}
+@media(max-width:780px){.hg{grid-template-columns:1fr;text-align:center}.hg .ph{order:-1}.cta,.soc,.facts{justify-content:center}}
+.tag{display:inline-block;font:700 12px/1 system-ui;letter-spacing:.12em;color:var(--a);margin-bottom:14px}
+h1{font-size:clamp(32px,5.5vw,54px);line-height:1.08;margin:0 0 12px;letter-spacing:-.02em}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--a),var(--a2),var(--a));background-size:200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gs 5s linear infinite}
+@keyframes gs{to{background-position:200%}}
+.role{font-size:19px;color:var(--mute);min-height:30px}.role b{color:var(--ink)}.role i{display:inline-block;width:2px;height:1.1em;background:var(--a);vertical-align:-3px;margin-left:2px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.hero p.bio{max-width:540px;color:var(--mute);margin:14px 0 22px}@media(max-width:780px){.hero p.bio{margin-inline:auto}}
+.cta,.soc,.facts{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.soc{margin-top:18px}.facts{margin-top:20px;font-size:12.5px;color:var(--mute);gap:8px}
+.facts span{background:var(--card);border:1px solid var(--line);padding:4px 11px;border-radius:99px}
+.btn{display:inline-block;padding:11px 22px;border-radius:99px;font-weight:600;font-size:14px;border:1px solid var(--a);transition:.25s;cursor:pointer;font-family:inherit}
+.btn.p{background:var(--a);color:#06231f;box-shadow:0 8px 24px var(--glow)}.btn.p:hover{transform:translateY(-3px);box-shadow:0 12px 30px var(--glow)}
+.btn.o{background:transparent;color:var(--ink)}.btn.o:hover{background:var(--chip);transform:translateY(-3px)}
+.soc a{font-size:13.5px;font-weight:600;color:var(--a);border-bottom:2px solid transparent;transition:.2s}.soc a:hover{border-color:var(--a)}
+.ph{display:grid;place-items:center}
+.ring{position:relative;width:230px;height:230px;border-radius:50%;padding:5px;background:conic-gradient(var(--a),var(--a2),var(--a));animation:sp 8s linear infinite}
+.ring img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:5px solid var(--bg);animation:sp 8s linear infinite reverse;display:block}
+@keyframes sp{to{transform:rotate(360deg)}}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:-26px;position:relative;z-index:2}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+.st{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;box-shadow:0 10px 30px var(--glow)}
+.st b{font-size:28px;color:var(--a);display:block;line-height:1.1}.st span{font-size:12.5px;color:var(--mute)}
+section{padding:68px 0 8px}
+h2{font-size:28px;margin:0 0 6px;letter-spacing:-.01em}h2::before{content:"";display:block;width:34px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--a),var(--a2));margin-bottom:12px}
+.sub{color:var(--mute);margin:0 0 26px;max-width:640px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;transition:transform .3s,box-shadow .3s,border-color .3s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-5px);box-shadow:0 16px 36px var(--glow);border-color:var(--a)}
+.card h3{margin:0 0 6px;font-size:16px}.card p{margin:0;color:var(--mute);font-size:14px}
+.ic{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;font-weight:800;color:#fff;margin-bottom:12px;background:linear-gradient(135deg,var(--a),var(--a2));transition:transform .4s}.card:hover .ic{transform:rotate(-8deg) scale(1.1)}
+.tl{position:relative;padding-left:30px}.tl::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--a),var(--a2));opacity:.5}
+.job{position:relative;margin-bottom:16px}.job::before{content:"";position:absolute;left:-30px;top:24px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--a);transition:.3s}.job:hover::before{background:var(--a);box-shadow:0 0 0 6px var(--glow)}
+.hd{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 14px;align-items:baseline}
+.hd h3{margin:0;font-size:17px}.dt{font-size:12px;font-weight:700;background:var(--chip);color:var(--a);padding:3px 11px;border-radius:99px}
+.co{color:var(--a);font-weight:600;font-size:14px;margin:2px 0 8px}
+.job ul{margin:0 0 12px;padding-left:18px;color:var(--mute);font-size:14px}.job li{margin-bottom:3px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}.chips span{font-size:12px;font-weight:600;background:var(--chip);color:var(--a);padding:3px 10px;border-radius:99px;transition:.2s}.chips span:hover{transform:translateY(-2px)}
+.lk{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.lk a{font-size:12.5px;font-weight:600;padding:6px 13px;border-radius:99px;background:var(--ink);color:var(--bg);transition:.2s}.lk a:hover{background:var(--a);color:#06231f;transform:translateY(-2px)}
+.pj{display:flex;flex-direction:column}.pj .chips{margin:12px 0 0}.pj .lk{margin-top:auto;padding-top:14px}
+.pj::after{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--a),var(--a2));transform:scaleX(0);transform-origin:left;transition:transform .4s}.pj:hover::after{transform:scaleX(1)}
+.sk h3{font-size:12px;letter-spacing:.1em;color:var(--a2);margin:0 0 12px}
+.sk div.r{margin-bottom:11px}.sk b{display:block;font-size:13.5px;margin-bottom:5px}
+.cert{display:flex;justify-content:space-between;align-items:center;gap:10px}.cert h3{font-size:14.5px}.cert p{font-size:12.5px}
+.cert a{white-space:nowrap;font-size:12.5px;font-weight:600;color:var(--a);border:1px solid var(--a);padding:6px 13px;border-radius:99px;transition:.2s}.cert a:hover{background:var(--a);color:#06231f}
+form{display:grid;gap:12px}.fr{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:560px){.fr{grid-template-columns:1fr}}
+input,select,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;transition:.2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--a);box-shadow:0 0 0 4px var(--glow)}textarea{min-height:120px;resize:vertical}
+.hp{position:absolute;left:-9999px}
+.cd{display:flex;flex-direction:column;gap:10px}.cd a{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px;transition:.25s}.cd a:hover{border-color:var(--a);transform:translateX(5px)}.cd small{display:block;color:var(--a);font-weight:700;font-size:11px;letter-spacing:.1em}
+.ok{color:var(--a);font-weight:600;min-height:22px}
+.close{text-align:center;margin:44px 0 0;font-style:italic;color:var(--mute)}
+footer{text-align:center;padding:26px 20px 34px;color:var(--mute);font-size:12.5px}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;transition-delay:var(--d,0s)}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style></head><body>
+<div id="bar"></div>
+<nav><div class="w"><a class="logo" href="#top">Wajahat<b>.</b></a>
+<a class="l" href="#about">About</a><a class="l" href="#work">Work</a><a class="l" href="#projects">Projects</a><a class="l" href="#skills">Skills</a><a class="l" href="#contact">Contact</a>
+<button id="th" aria-label="Toggle theme">◐</button></div></nav>
+
+<header class="hero" id="top"><div class="blob b1"></div><div class="blob b2"></div>
+<div class="w hg"><div>
+<span class="tag rv">DATA ANALYST · IT SPECIALIST</span>
+<h1 class="rv" style="--d:.1s">Turning IT Systems and Data into <em>Reliable Results</em></h1>
+<div class="role rv" style="--d:.2s">I’m a <b id="ty"></b><i></i></div>
+<p class="bio rv" style="--d:.3s">Data Science graduate with two years of hands-on experience across IT support, network administration, and data analysis. I build Power BI and Excel dashboards, keep networks and users running, and ranked in the top 4 of 96 technical support staff at Sybrid.</p>
+<div class="cta rv" style="--d:.4s"><a class="btn p" href="#projects">View Projects</a><a class="btn o" href="#contact">Contact Me</a></div>
+<div class="soc rv" style="--d:.5s"><a href="https://www.linkedin.com/in/wajahat-ali-5b796334b" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/wajahatayaan56" target="_blank" rel="noopener">GitHub</a></div>
+<div class="facts rv" style="--d:.6s"><span>Riyadh, KSA</span><span>Iqama: Transferable</span><span>English · Urdu/Hindi · Arabic (basic)</span></div>
+</div><div class="ph rv" style="--d:.3s"><div class="ring"><img alt="Wajahat Ali" src="data:image/jpeg;base64,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"></div></div></div></header>
+
+<div class="w stats">
+<div class="st rv"><b data-n="4" data-p="Top ">0</b><span>of 96 support staff</span></div>
+<div class="st rv" style="--d:.1s"><b data-n="2" data-s="+">0</b><span>years hands-on</span></div>
+<div class="st rv" style="--d:.2s"><b data-n="4">0</b><span>roles, 3 industries</span></div>
+<div class="st rv" style="--d:.3s"><b data-n="6">0</b><span>certifications</span></div></div>
+
+<section id="about"><div class="w"><h2 class="rv">About Me</h2>
+<p class="sub rv">I work where IT support meets data. As a Data Science graduate (BS, <a href="https://gcuf.edu.pk/" target="_blank" rel="noopener" style="color:var(--a);font-weight:600">Government College University, Faisalabad</a>, 2025), I have supported users, built networks, and turned raw numbers into dashboards across corporate, healthcare, and telecom environments.</p>
+<div class="grid">
+<div class="card rv"><div class="ic">IT</div><h3>IT Technical Support</h3><p>L1 troubleshooting for hardware, software, LAN/WAN, and printers, with SLA-focused ticket resolution and clear documentation.</p></div>
+<div class="card rv" style="--d:.08s"><div class="ic">DA</div><h3>Data Analysis</h3><p>Power BI, Excel (PivotTables), SQL, and Python for dashboards, reports, and insights.</p></div>
+<div class="card rv" style="--d:.16s"><div class="ic">NS</div><h3>Networking &amp; Security</h3><p>Switch, router, firewall, and VPN configuration, plus user and directory management.</p></div>
+<div class="card rv"><div class="ic">PS</div><h3>Technical Problem-Solving</h3><p>Step-by-step guidance for end users and clean escalation to L2/L3 teams.</p></div>
+<div class="card rv" style="--d:.08s"><div class="ic">FS</div><h3>Full-Stack Development</h3><p>Desktop and web apps with Electron.js, Flask, React, and Firebase.</p></div>
+<div class="card rv" style="--d:.16s"><div class="ic">3D</div><h3>3D Design &amp; Presentation</h3><p>Photorealistic 3D renders and client-ready layouts using 3D CAD, SketchUp, and Canva.</p></div>
+</div></div></section>
+
+<section id="work"><div class="w"><h2 class="rv">Work Experience</h2><p class="sub rv">Four roles across retail, corporate IT, healthcare, and telecom.</p>
+<div class="tl">
+<div class="job card rv"><div class="hd"><h3>IT Engineer</h3><span class="dt">Jan 2026 – Present</span></div><div class="co">Aran Cucine Riyadh · Full-time</div>
+<ul><li>Configure and maintain the office network, Wi-Fi, and CCTV security systems.</li><li>Provide hardware and software support for showroom and office staff; manage printers and peripherals to minimize downtime.</li><li>Maintain the website and online store, and manage social media accounts.</li><li>Deliver photorealistic 3D renders and presentation-ready layouts for multiple client projects on time.</li></ul>
+<div class="chips"><span>Networking</span><span>CCTV</span><span>3D CAD</span><span>SketchUp</span><span>Canva</span><span>E-commerce</span></div>
+<div class="lk"><a href="https://www.arancucine.it/en/" target="_blank" rel="noopener">Visit Aran Cucine ↗</a></div></div>
+<div class="job card rv"><div class="hd"><h3>IT Technical Support Engineer</h3><span class="dt">Aug – Nov 2025</span></div><div class="co">Sybrid Private Limited (A Lakson Group Company) · Lahore</div>
+<ul><li><b>Ranked Top 4 of 96</b> technical support staff for performance and dedication.</li><li>Resolved help desk tickets while meeting SLA targets.</li><li>Provided L1 support for hardware, software, LAN, and WAN, including remote support by phone, email, and remote-access tools.</li><li>Escalated unresolved issues to L2/L3 and documented incidents, fixes, and escalations.</li></ul>
+<div class="chips"><span>ServiceNow</span><span>Jira</span><span>Freshdesk</span><span>Zendesk</span><span>Microsoft 365</span></div>
+<div class="lk"><a href="https://sybrid.com/" target="_blank" rel="noopener">Visit Sybrid ↗</a><a href="https://drive.google.com/file/d/1ADy9Db9VIgu8GnBrlvshpzRGRSNfv29Z/view?usp=sharing" target="_blank" rel="noopener">Experience Letter ↗</a></div></div>
+<div class="job card rv"><div class="hd"><h3>Technical Support Intern</h3><span class="dt">Feb – Apr 2025</span></div><div class="co">Kuwait Medical Complex (KMC) · Skardu</div>
+<ul><li>Supported computers, printers, and network devices in a hospital environment.</li><li>Helped digitize patient records, improving accessibility and reliability of health information systems.</li><li>Managed email security and software updates; assisted with CCTV setup and maintenance.</li></ul>
+<div class="chips"><span>Windows</span><span>Networking</span><span>Email Security</span><span>CCTV</span></div>
+<div class="lk"><a href="https://drive.google.com/file/d/1h2p53Nk7t0q6l_WlhozxzVsLtZOCEGc7/view?usp=drive_link" target="_blank" rel="noopener">Experience Letter ↗</a></div></div>
+<div class="job card rv"><div class="hd"><h3>Network Engineer Intern</h3><span class="dt">Jun – Sep 2024</span></div><div class="co">Special Communications Organization (SCO) · Skardu</div>
+<ul><li>Installed and configured routers, switches, and network hardware for LAN/WAN infrastructure.</li><li>Assisted in deploying and maintaining a fiber-optic network, including configuration and routing.</li><li>Managed users, permissions, and directories; supported firewall and VPN setup for secure remote access.</li></ul>
+<div class="chips"><span>Routers</span><span>Switches</span><span>Fiber</span><span>Firewall</span><span>VPN</span></div>
+<div class="lk"><a href="https://sco.gov.pk/" target="_blank" rel="noopener">Visit SCO ↗</a></div></div>
+</div></div></section>
+
+<section id="projects"><div class="w"><h2 class="rv">Featured Projects</h2><p class="sub rv">Applications and machine-learning tools built end to end.</p>
+<div class="grid">
+<div class="card pj rv"><h3>SafeScan.Pro: URL Malware Analyzer</h3><p>Final year project. A Random Forest model classifies URLs as malicious or benign using lexical and structural features for real-time analysis, evaluated with a confusion matrix and ROC curve, in a full-stack scanning app.</p><div class="chips"><span>Python</span><span>Flask</span><span>React.js</span><span>Scikit-learn</span><span>Pandas</span></div><div class="lk"><a href="https://github.com/wajahatayaan56/SafeScan.Pro.git" target="_blank" rel="noopener">View on GitHub ↗</a></div></div>
+<div class="card pj rv" style="--d:.1s"><h3>Raha DMS: Document Management</h3><p>Desktop system with quotation, delivery note, and purchase order modules, auto-numbering and PDF generation, plus a Firebase-backed Product Assistant with offline support and auto-updates.</p><div class="chips"><span>Electron.js</span><span>Node.js</span><span>Firebase</span><span>JavaScript</span></div><div class="lk"><a href="https://github.com/wajuayaan-ui/Raha" target="_blank" rel="noopener">View on GitHub ↗</a></div></div>
+<div class="card pj rv" style="--d:.2s"><h3>Gesture-Controlled Virtual Paint</h3><p>Webcam drawing tool driven by hand gestures. Draw, erase, and pick colors in real time, switching between Random Forest and CNN recognition modes.</p><div class="chips"><span>Python</span><span>OpenCV</span><span>MediaPipe</span><span>TensorFlow</span></div><div class="lk"><a href="https://github.com/wajahatayaan56/Gesture-Controlled-Virtual-Paint-App.git" target="_blank" rel="noopener">View on GitHub ↗</a></div></div>
+</div></div></section>
+
+<section id="skills"><div class="w"><h2 class="rv">Skills &amp; Certifications</h2><p class="sub rv">Grouped by technical skills, data tools, and credentials.</p>
+<div class="grid">
+<div class="card sk rv"><h3>TECHNICAL SKILLS</h3>
+<div class="r"><b>Networking &amp; Security</b><div class="chips"><span>Switching</span><span>Firewalls</span><span>LAN/WAN</span><span>VPN</span><span>Monitoring</span><span>User &amp; directory mgmt</span></div></div>
+<div class="r"><b>IT Support</b><div class="chips"><span>Troubleshooting</span><span>L1 support</span><span>Documentation</span><span>Remote support</span></div></div>
+<div class="r"><b>Operating Systems</b><div class="chips"><span>Windows</span><span>macOS</span><span>Ubuntu</span><span>Kali</span><span>Parrot</span><span>Android</span></div></div>
+<div class="r"><b>ITSM &amp; Productivity</b><div class="chips"><span>ServiceNow</span><span>Jira</span><span>Freshdesk</span><span>Zendesk</span><span>Microsoft 365</span></div></div></div>
+<div class="card sk rv" style="--d:.1s"><h3>DATA &amp; TOOLS</h3>
+<div class="r"><b>Languages</b><div class="chips"><span>Python</span><span>R</span><span>SQL</span><span>C++ (intermediate)</span></div></div>
+<div class="r"><b>BI &amp; Analytics</b><div class="chips"><span>Power BI</span><span>Tableau</span><span>Excel PivotTables</span><span>SPSS</span><span>SAS</span><span>Looker</span><span>QlikView</span></div></div>
+<div class="r"><b>Databases &amp; Cloud</b><div class="chips"><span>MySQL</span><span>Oracle</span><span>SQLite</span><span>MS Access</span><span>SSMS</span><span>Firebase</span><span>Supabase</span></div></div>
+<div class="r"><b>ERP &amp; AI</b><div class="chips"><span>Odoo</span><span>SAP</span><span>NetSuite</span><span>Dynamics 365</span><span>ChatGPT</span><span>Gemini</span><span>Claude</span></div></div></div>
+</div>
+<h3 class="rv" style="margin:30px 0 12px">Professional Certifications</h3>
+<div class="grid">
+<div class="card cert rv"><div><h3>Analyzing and Visualizing Data with Microsoft Excel</h3><p>Skillsoft · Jan 2025</p></div><a href="https://drive.google.com/file/d/1C6apKATIZphinL05trFB-Vw0qAuTF5FY/view" target="_blank" rel="noopener">View ↗</a></div>
+<div class="card cert rv" style="--d:.06s"><div><h3>Symantec Certified Specialist: Cyber Security Services</h3><p>Infosys · Jan 2025</p></div><a href="https://drive.google.com/file/d/12hElAEIft4Xv7D4tuGyIIFMzbEU0x0vh/view" target="_blank" rel="noopener">View ↗</a></div>
+<div class="card cert rv" style="--d:.12s"><div><h3>Symantec Certified Specialist: Cyber Security Services</h3><p>Simplilearn · Dec 2024</p></div><a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIxMjEzIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvNzcwMjg5NF81MzI2NDgyMTczNDk4NzA5OTE3NS5wbmciLCJ1c2VybmFtZSI6IldhamFoYXQgQWxpIn0%3D&amp;referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F3736%2FIntroduction-to-Cyber-Security%2Fcertificate%2Fdownload-skillup&amp;%24web_only=true" target="_blank" rel="noopener">View ↗</a></div>
+<div class="card cert rv"><div><h3>CCNA 200-301: Network Fundamentals</h3><p>Simplilearn · Jan 2026</p></div><a href="https://simpli-web.app.link/e/l76AOc7B0Zb" target="_blank" rel="noopener">View ↗</a></div>
+<div class="card cert rv" style="--d:.06s"><div><h3>Artificial Intelligence</h3><p>Simplilearn · Dec 2024</p></div><a href="https://simpli-web.app.link/e/V5PfwTfkMQb" target="_blank" rel="noopener">View ↗</a></div>
+<div class="card cert rv" style="--d:.12s"><div><h3>Microsoft Office 365</h3><p>Edraak · Sep 2025</p></div><a href="https://programs.edraak.org/en/learn/verify-certificate/e6d086fef1ea48849040cb27a3b2811a/?lang=en" target="_blank" rel="noopener">View ↗</a></div>
+</div></div></section>
+
+<section id="contact"><div class="w"><h2 class="rv">Let’s Work Together</h2><p class="sub rv">I’m open to IT support, network, and data analyst opportunities in Riyadh and remote roles. Send a message and I’ll reply promptly.</p>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+<form class="card rv" id="f"><div class="fr"><input name="n" placeholder="Full name *" required><input name="e" type="email" placeholder="Email address *" required></div>
+<select name="s"><option>Job Opportunity</option><option>Project Inquiry</option><option>Collaboration</option><option>Other</option></select>
+<textarea name="m" placeholder="Your message *" required></textarea><input class="hp" name="h" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button class="btn p" type="submit">Send Message</button><div class="ok" id="ok"></div></form>
+<div class="cd rv" style="--d:.1s"><a href="mailto:wajahatayaann@gmail.com"><small>EMAIL</small>wajahatayaann@gmail.com</a><a href="tel:+966553400154"><small>PHONE</small>+966 55 340 0154</a><a href="https://www.linkedin.com/in/wajahat-ali-5b796334b" target="_blank" rel="noopener"><small>LINKEDIN</small>linkedin.com/in/wajahat-ali-5b796334b</a><a href="https://github.com/wajahatayaan56" target="_blank" rel="noopener"><small>GITHUB</small>github.com/wajahatayaan56</a></div></div>
+<p class="close rv">Reliable systems, clear data, and support people can count on. Let’s talk.</p></div></section>
+<footer>© 2026 Wajahat Ali · Data Analyst &amp; IT Specialist · Riyadh, KSA</footer>
+
+<script>
+(function(){
+var r=document.documentElement,q=function(s){return document.querySelector(s)},qa=function(s){return[].slice.call(document.querySelectorAll(s))};
+try{var t=localStorage.getItem('th');if(t)r.setAttribute('data-theme',t)}catch(e){}
+q('#th').onclick=function(){var d=r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'),n=d==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('th',n)}catch(e){}};
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+qa('.rv').forEach(function(e){io.observe(e)});
+var co=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;co.unobserve(e.target);var el=e.target,n=+el.dataset.n,p=el.dataset.p||'',s=el.dataset.s||'',i=0,st=Math.max(1,Math.round(900/n/16)),tm=setInterval(function(){i++;el.textContent=p+i+s;if(i>=n)clearInterval(tm)},Math.round(900/n))})},{threshold:.6});
+qa('[data-n]').forEach(function(e){co.observe(e)});
+var rs=['Data Analyst','IT Support Engineer','Network Administrator','Full-Stack Developer'],ri=0,ci=0,del=false,ty=q('#ty');
+if(matchMedia('(prefers-reduced-motion:reduce)').matches){ty.textContent=rs[0]}else{(function tick(){var w=rs[ri];ci+=del?-1:1;ty.textContent=w.slice(0,ci);var d=del?35:75;if(!del&&ci===w.length){del=true;d=1400}else if(del&&ci===0){del=false;ri=(ri+1)%rs.length;d=300}setTimeout(tick,d)})()}
+var secs=qa('section'),ls=qa('nav a.l'),bar=q('#bar');
+function sc(){var h=document.documentElement,y=h.scrollTop||document.body.scrollTop;bar.style.width=(y/Math.max(1,h.scrollHeight-h.clientHeight)*100)+'%';var cur='';secs.forEach(function(s){if(s.getBoundingClientRect().top<150)cur=s.id});ls.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)})}
+addEventListener('scroll',sc,{passive:true});sc();
+q('#f').onsubmit=function(e){e.preventDefault();var f=e.target;if(f.h.value)return;var b='Name: '+f.n.value+'\nEmail: '+f.e.value+'\n\n'+f.m.value;location.href='mailto:wajahatayaann@gmail.com?subject='+encodeURIComponent(f.s.value+' - '+f.n.value)+'&body='+encodeURIComponent(b);q('#ok').textContent='Thanks, your email app is opening. I’ll be in touch soon.'};
+})();
+</script></body></html>
