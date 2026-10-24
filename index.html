@@ -137,100 +137,123 @@ nav{background:var(--glass);-webkit-backdrop-filter:blur(22px) saturate(180%);ba
 @media(max-width:780px){.globe{width:340px;height:340px;margin:-170px 0 0 -170px}.o1{left:2%}.o2{right:2%}.o3{left:8%}}
 @media(prefers-reduced-motion:reduce){.orb,.ring{animation:none!important;transform:none}}
 
+/* ===== Language switch + RTL ===== */
+.lg{height:34px;padding:0 14px;border-radius:99px;border:1px solid var(--gb);background:var(--glass);color:var(--ink);font:700 12.5px/1 system-ui,"Segoe UI",Tahoma,sans-serif;cursor:pointer;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:var(--gin);transition:.25s}.lg:hover{background:var(--chip);border-color:var(--a)}
+[dir=rtl] body{font-family:"Cairo","Segoe UI",Tahoma,Arial,system-ui,sans-serif}
+[dir=rtl] *{letter-spacing:0!important}
+[dir=rtl] h1{line-height:1.32;font-size:clamp(28px,4.5vw,46px)}
+[dir=rtl] .wd{padding:.14em 0;margin:-.14em 0}
+[dir=rtl] .logo{margin-right:0;margin-left:auto}
+[dir=rtl] .tl{padding-left:0;padding-right:30px}
+[dir=rtl] .tl::before{left:auto;right:7px}
+[dir=rtl] .job::before{left:auto;right:-30px}
+[dir=rtl] .job ul{padding-left:0;padding-right:18px}
+[dir=rtl] .tl .job.rv{transform:translateX(22px)}[dir=rtl] .tl .job.rv.in{transform:none}
+[dir=rtl] h2::before{transform-origin:right}
+[dir=rtl] .pj::after{transform-origin:right}
+[dir=rtl] .hl::after{left:auto;right:0;text-align:right}
+[dir=rtl] .role i{margin-left:0;margin-right:2px}
+[dir=rtl] .cd a:hover{transform:translateX(-5px)}
+[dir=rtl] .cd bdi{display:block;text-align:right}
+[dir=rtl] input[type=email]{unicode-bidi:plaintext}
+[dir=rtl] #bar{left:auto;right:0}
+[dir=rtl] .hero::before{-webkit-mask-image:radial-gradient(ellipse 75% 85% at 28% 38%,#000 0,transparent 72%);mask-image:radial-gradient(ellipse 75% 85% at 28% 38%,#000 0,transparent 72%)}
+[dir=rtl] .hero::after{background:radial-gradient(circle at 24% 34%,var(--glow),transparent 52%)}
+
 </style><noscript><style>.rv{opacity:1;transform:none}.wd>span{transform:none}h2::before{transform:none}.tl::before{transform:none}.job::before{transform:scale(1)}</style></noscript></head><body>
 <div class="bgfx" aria-hidden="true"><i></i><i></i><i></i></div>
 <div id="bar"></div>
-<nav><div class="w"><a class="logo" href="#top">Wajahat<b>.</b></a>
-<a class="l" href="#about">About</a><a class="l" href="#work">Work</a><a class="l" href="#projects">Projects</a><a class="l" href="#skills">Skills</a><a class="l" href="#contact">Contact</a>
-<button id="th" aria-label="Toggle theme">◐</button></div></nav>
+<nav><div class="w"><a class="logo" href="#top" data-i18n="logo">Wajahat<b>.</b></a>
+<a class="l" href="#about" data-i18n="n_about">About</a><a class="l" href="#work" data-i18n="n_work">Work</a><a class="l" href="#projects" data-i18n="n_projects">Projects</a><a class="l" href="#skills" data-i18n="n_skills">Skills</a><a class="l" href="#contact" data-i18n="n_contact">Contact</a>
+<button id="lg" class="lg" aria-label="Switch language / تغيير اللغة">العربية</button><button id="th" aria-label="Toggle theme">◐</button></div></nav>
 
 <header class="hero" id="top">
 <div class="w hg"><div>
-<span class="tag rv">DATA ANALYST · IT SPECIALIST</span>
-<h1>Turning IT Systems and Data into <em>Reliable Results</em></h1>
-<div class="role rv" style="--d:.2s">I’m a <b id="ty"></b><i></i></div>
-<p class="bio rv" style="--d:.3s"><span class="hl" tabindex="0" data-tip="BS Data Science, Government College University, Faisalabad (2025)">Data Science graduate</span> with two years of hands-on experience across IT support, network administration, and data analysis. I build Power BI and Excel dashboards, keep networks and users running, and ranked in the top 4 of 96 technical support staff at Sybrid.</p>
-<div class="cta rv" style="--d:.4s"><a class="btn p" href="#projects">View Projects</a><a class="btn o" href="#contact">Contact Me</a></div>
+<span class="tag rv" data-i18n="tag">DATA ANALYST · IT SPECIALIST</span>
+<h1 id="h1">Turning IT Systems and Data into <em>Reliable Results</em></h1>
+<div class="role rv" style="--d:.2s"><span data-i18n="role_pre">I’m a </span><b id="ty"></b><i></i></div>
+<p class="bio rv" style="--d:.3s" data-i18n="bio"><span class="hl" tabindex="0" data-tip="BS Data Science, Government College University, Faisalabad (2025)">Data Science graduate</span> with two years of hands-on experience across IT support, network administration, and data analysis. I build Power BI and Excel dashboards, keep networks and users running, and ranked in the top 4 of 96 technical support staff at Sybrid.</p>
+<div class="cta rv" style="--d:.4s"><a class="btn p" href="#projects" data-i18n="b_proj">View Projects</a><a class="btn o" href="#contact" data-i18n="b_contact">Contact Me</a></div>
 <div class="soc rv" style="--d:.5s"><a href="https://www.linkedin.com/in/wajahat-ali-5b796334b" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/wajahatayaan56" target="_blank" rel="noopener">GitHub</a></div>
-<div class="facts rv" style="--d:.6s"><span>Riyadh, KSA</span><span>Iqama: Transferable</span><span>English · Urdu/Hindi · Arabic (basic)</span></div>
-</div><div class="ph rv" style="--d:.3s"><canvas id="globe" class="globe" aria-hidden="true"></canvas><div class="ring"><div class="slides" id="slides"><div class="mono" id="mono" aria-hidden="true">WA</div></div></div><div class="dots" id="dots"></div><span class="orb o1"><i></i>Power BI</span><span class="orb o2"><i></i>Python</span><span class="orb o3"><i></i>Networking</span></div></div></header>
+<div class="facts rv" style="--d:.6s"><span data-i18n="f_loc">Riyadh, KSA</span><span data-i18n="f_iqama">Iqama: Transferable</span><span data-i18n="f_lang">English · Urdu/Hindi · Arabic (basic)</span></div>
+</div><div class="ph rv" style="--d:.3s"><canvas id="globe" class="globe" aria-hidden="true"></canvas><div class="ring"><div class="slides" id="slides"><div class="mono" id="mono" aria-hidden="true">WA</div></div></div><div class="dots" id="dots"></div><span class="orb o1"><i></i>Power BI</span><span class="orb o2"><i></i>Python</span><span class="orb o3"><i></i><span data-i18n="c_networking">Networking</span></span></div></div></header>
 
 <div class="w stats">
-<div class="st st-rank rv"><b data-n="4" data-p="Top ">0</b><span>of 96 technical support staff</span><div class="rk" id="rk" aria-hidden="true"></div><small>Ranked at Sybrid for performance and dedication</small></div>
-<div class="st rv" style="--d:.1s"><b data-n="2" data-s="+">0</b><span>years of hands-on experience</span></div>
-<div class="st rv" style="--d:.2s"><b data-n="4">0</b><span>roles, 3 industries</span></div>
-<div class="st rv" style="--d:.3s"><b data-n="6">0</b><span>certifications</span></div></div>
+<div class="st st-rank rv"><b data-n="4" data-p="Top " data-par="أفضل ">0</b><span data-i18n="st1">of 96 technical support staff</span><div class="rk" id="rk" aria-hidden="true"></div><small data-i18n="st1s">Ranked at Sybrid for performance and dedication</small></div>
+<div class="st rv" style="--d:.1s"><b data-n="2" data-s="+">0</b><span data-i18n="st2">years of hands-on experience</span></div>
+<div class="st rv" style="--d:.2s"><b data-n="4">0</b><span data-i18n="st3">roles, 3 industries</span></div>
+<div class="st rv" style="--d:.3s"><b data-n="6">0</b><span data-i18n="st4">certifications</span></div></div>
 
-<section id="about"><div class="w"><h2 class="rv">About Me</h2>
-<p class="sub rv">I work where IT support meets data. As a Data Science graduate (BS, <a href="https://gcuf.edu.pk/" target="_blank" rel="noopener" style="color:var(--a);font-weight:600">Government College University, Faisalabad</a>, 2025), I have supported users, built networks, and turned raw numbers into dashboards across corporate, healthcare, and telecom environments.</p>
+<section id="about"><div class="w"><h2 class="rv" data-i18n="h_about">About Me</h2>
+<p class="sub rv" data-i18n="about_sub">I work where IT support meets data. As a Data Science graduate (BS, <a href="https://gcuf.edu.pk/" target="_blank" rel="noopener" style="color:var(--a);font-weight:600">Government College University, Faisalabad</a>, 2025), I have supported users, built networks, and turned raw numbers into dashboards across corporate, healthcare, and telecom environments.</p>
 <div class="grid">
-<div class="card rv"><div class="ic">IT</div><h3>IT Technical Support</h3><p>L1 troubleshooting for hardware, software, LAN/WAN, and printers, with SLA-focused ticket resolution and clear documentation.</p></div>
-<div class="card rv" style="--d:.08s"><div class="ic">DA</div><h3>Data Analysis</h3><p>Power BI, Excel (PivotTables), SQL, and Python for dashboards, reports, and insights.</p></div>
-<div class="card rv" style="--d:.16s"><div class="ic">NS</div><h3>Networking &amp; Security</h3><p>Switch, router, firewall, and VPN configuration, plus user and directory management.</p></div>
-<div class="card rv"><div class="ic">PS</div><h3>Technical Problem-Solving</h3><p>Step-by-step guidance for end users and clean escalation to L2/L3 teams.</p></div>
-<div class="card rv" style="--d:.08s"><div class="ic">FS</div><h3>Full-Stack Development</h3><p>Desktop and web apps with Electron.js, Flask, React, and Firebase.</p></div>
-<div class="card rv" style="--d:.16s"><div class="ic">3D</div><h3>3D Design &amp; Presentation</h3><p>Photorealistic 3D renders and client-ready layouts using 3D CAD, SketchUp, and Canva.</p></div>
+<div class="card rv"><div class="ic">IT</div><h3 data-i18n="s1h">IT Technical Support</h3><p data-i18n="s1p">L1 troubleshooting for hardware, software, LAN/WAN, and printers, with SLA-focused ticket resolution and clear documentation.</p></div>
+<div class="card rv" style="--d:.08s"><div class="ic">DA</div><h3 data-i18n="s2h">Data Analysis</h3><p data-i18n="s2p">Power BI, Excel (PivotTables), SQL, and Python for dashboards, reports, and insights.</p></div>
+<div class="card rv" style="--d:.16s"><div class="ic">NS</div><h3 data-i18n="netsec">Networking &amp; Security</h3><p data-i18n="s3p">Switch, router, firewall, and VPN configuration, plus user and directory management.</p></div>
+<div class="card rv"><div class="ic">PS</div><h3 data-i18n="s4h">Technical Problem-Solving</h3><p data-i18n="s4p">Step-by-step guidance for end users and clean escalation to L2/L3 teams.</p></div>
+<div class="card rv" style="--d:.08s"><div class="ic">FS</div><h3 data-i18n="s5h">Full-Stack Development</h3><p data-i18n="s5p">Desktop and web apps with Electron.js, Flask, React, and Firebase.</p></div>
+<div class="card rv" style="--d:.16s"><div class="ic">3D</div><h3 data-i18n="s6h">3D Design &amp; Presentation</h3><p data-i18n="s6p">Photorealistic 3D renders and client-ready layouts using 3D CAD, SketchUp, and Canva.</p></div>
 </div></div></section>
 
-<section id="work"><div class="w"><h2 class="rv">Work Experience</h2><p class="sub rv">Four roles across retail, corporate IT, healthcare, and telecom.</p>
+<section id="work"><div class="w"><h2 class="rv" data-i18n="h_work">Work Experience</h2><p class="sub rv" data-i18n="work_sub">Four roles across retail, corporate IT, healthcare, and telecom.</p>
 <div class="tl">
-<div class="job card rv"><div class="hd"><h3>IT Engineer</h3><span class="dt">Jan 2026 – Present</span></div><div class="co">Aran Cucine Riyadh · Full-time</div>
-<ul><li>Configure and maintain the office network, Wi-Fi, and CCTV security systems.</li><li>Provide hardware and software support for showroom and office staff; manage printers and peripherals to minimize downtime.</li><li>Maintain the website and online store, and manage social media accounts.</li><li>Deliver photorealistic 3D renders and presentation-ready layouts for multiple client projects on time.</li></ul>
-<div class="chips"><span>Networking</span><span>CCTV</span><span>3D CAD</span><span>SketchUp</span><span>Canva</span><span>E-commerce</span></div>
-<div class="lk"><a href="https://www.arancucine.it/en/" target="_blank" rel="noopener">Visit Aran Cucine ↗</a></div></div>
-<div class="job card rv"><div class="hd"><h3>IT Technical Support Engineer</h3><span class="dt">Aug – Nov 2025</span></div><div class="co">Sybrid Private Limited (A Lakson Group Company) · Lahore</div>
-<ul><li><b>Ranked Top 4 of 96</b> technical support staff for performance and dedication.</li><li>Resolved help desk tickets while meeting SLA targets.</li><li>Provided L1 support for hardware, software, LAN, and WAN, including remote support by phone, email, and remote-access tools.</li><li>Escalated unresolved issues to L2/L3 and documented incidents, fixes, and escalations.</li></ul>
+<div class="job card rv"><div class="hd"><h3 data-i18n="j1t">IT Engineer</h3><span class="dt" data-i18n="j1d">Jan 2026 – Present</span></div><div class="co" data-i18n="j1c">Aran Cucine Riyadh · Full-time</div>
+<ul><li data-i18n="j1a">Configure and maintain the office network, Wi-Fi, and CCTV security systems.</li><li data-i18n="j1b">Provide hardware and software support for showroom and office staff; manage printers and peripherals to minimize downtime.</li><li data-i18n="j1c2">Maintain the website and online store, and manage social media accounts.</li><li data-i18n="j1d2">Deliver photorealistic 3D renders and presentation-ready layouts for multiple client projects on time.</li></ul>
+<div class="chips"><span data-i18n="c_networking">Networking</span><span>CCTV</span><span>3D CAD</span><span>SketchUp</span><span>Canva</span><span data-i18n="c_ecom">E-commerce</span></div>
+<div class="lk"><a href="https://www.arancucine.it/en/" target="_blank" rel="noopener" data-i18n="l_aran">Visit Aran Cucine ↗</a></div></div>
+<div class="job card rv"><div class="hd"><h3 data-i18n="j2t">IT Technical Support Engineer</h3><span class="dt" data-i18n="j2d">Aug – Nov 2025</span></div><div class="co" data-i18n="j2c">Sybrid Private Limited (A Lakson Group Company) · Lahore</div>
+<ul><li data-i18n="j2a"><b>Ranked Top 4 of 96</b> technical support staff for performance and dedication.</li><li data-i18n="j2b">Resolved help desk tickets while meeting SLA targets.</li><li data-i18n="j2c2">Provided L1 support for hardware, software, LAN, and WAN, including remote support by phone, email, and remote-access tools.</li><li data-i18n="j2d2">Escalated unresolved issues to L2/L3 and documented incidents, fixes, and escalations.</li></ul>
 <div class="chips"><span>ServiceNow</span><span>Jira</span><span>Freshdesk</span><span>Zendesk</span><span>Microsoft 365</span></div>
-<div class="lk"><a href="https://sybrid.com/" target="_blank" rel="noopener">Visit Sybrid ↗</a><a href="https://drive.google.com/file/d/1ADy9Db9VIgu8GnBrlvshpzRGRSNfv29Z/view?usp=sharing" target="_blank" rel="noopener">Experience Letter ↗</a></div></div>
-<div class="job card rv"><div class="hd"><h3>Technical Support Intern</h3><span class="dt">Feb – Apr 2025</span></div><div class="co">Kuwait Medical Complex (KMC) · Skardu</div>
-<ul><li>Supported computers, printers, and network devices in a hospital environment.</li><li>Helped digitize patient records, improving accessibility and reliability of health information systems.</li><li>Managed email security and software updates; assisted with CCTV setup and maintenance.</li></ul>
-<div class="chips"><span>Windows</span><span>Networking</span><span>Email Security</span><span>CCTV</span></div>
-<div class="lk"><a href="https://drive.google.com/file/d/1h2p53Nk7t0q6l_WlhozxzVsLtZOCEGc7/view?usp=drive_link" target="_blank" rel="noopener">Experience Letter ↗</a></div></div>
-<div class="job card rv"><div class="hd"><h3>Network Engineer Intern</h3><span class="dt">Jun – Sep 2024</span></div><div class="co">Special Communications Organization (SCO) · Skardu</div>
-<ul><li>Installed and configured routers, switches, and network hardware for LAN/WAN infrastructure.</li><li>Assisted in deploying and maintaining a fiber-optic network, including configuration and routing.</li><li>Managed users, permissions, and directories; supported firewall and VPN setup for secure remote access.</li></ul>
-<div class="chips"><span>Routers</span><span>Switches</span><span>Fiber</span><span>Firewall</span><span>VPN</span></div>
-<div class="lk"><a href="https://sco.gov.pk/" target="_blank" rel="noopener">Visit SCO ↗</a></div></div>
+<div class="lk"><a href="https://sybrid.com/" target="_blank" rel="noopener" data-i18n="l_syb">Visit Sybrid ↗</a><a href="https://drive.google.com/file/d/1ADy9Db9VIgu8GnBrlvshpzRGRSNfv29Z/view?usp=sharing" target="_blank" rel="noopener" data-i18n="l_exp">Experience Letter ↗</a></div></div>
+<div class="job card rv"><div class="hd"><h3 data-i18n="j3t">Technical Support Intern</h3><span class="dt" data-i18n="j3d">Feb – Apr 2025</span></div><div class="co" data-i18n="j3c">Kuwait Medical Complex (KMC) · Skardu</div>
+<ul><li data-i18n="j3a">Supported computers, printers, and network devices in a hospital environment.</li><li data-i18n="j3b">Helped digitize patient records, improving accessibility and reliability of health information systems.</li><li data-i18n="j3c2">Managed email security and software updates; assisted with CCTV setup and maintenance.</li></ul>
+<div class="chips"><span>Windows</span><span data-i18n="c_networking">Networking</span><span data-i18n="c_emailsec">Email Security</span><span>CCTV</span></div>
+<div class="lk"><a href="https://drive.google.com/file/d/1h2p53Nk7t0q6l_WlhozxzVsLtZOCEGc7/view?usp=drive_link" target="_blank" rel="noopener" data-i18n="l_exp">Experience Letter ↗</a></div></div>
+<div class="job card rv"><div class="hd"><h3 data-i18n="j4t">Network Engineer Intern</h3><span class="dt" data-i18n="j4d">Jun – Sep 2024</span></div><div class="co" data-i18n="j4c">Special Communications Organization (SCO) · Skardu</div>
+<ul><li data-i18n="j4a">Installed and configured routers, switches, and network hardware for LAN/WAN infrastructure.</li><li data-i18n="j4b">Assisted in deploying and maintaining a fiber-optic network, including configuration and routing.</li><li data-i18n="j4c2">Managed users, permissions, and directories; supported firewall and VPN setup for secure remote access.</li></ul>
+<div class="chips"><span data-i18n="c_routers">Routers</span><span data-i18n="c_switches">Switches</span><span data-i18n="c_fiber">Fiber</span><span data-i18n="c_firewall">Firewall</span><span>VPN</span></div>
+<div class="lk"><a href="https://sco.gov.pk/" target="_blank" rel="noopener" data-i18n="l_sco">Visit SCO ↗</a></div></div>
 </div></div></section>
 
-<section id="projects"><div class="w"><h2 class="rv">Featured Projects</h2><p class="sub rv">Applications and machine-learning tools built end to end.</p>
+<section id="projects"><div class="w"><h2 class="rv" data-i18n="h_proj">Featured Projects</h2><p class="sub rv" data-i18n="proj_sub">Applications and machine-learning tools built end to end.</p>
 <div class="grid">
-<div class="card pj rv"><h3>SafeScan.Pro: URL Malware Analyzer</h3><p>Final year project. A Random Forest model classifies URLs as malicious or benign using lexical and structural features for real-time analysis, evaluated with a confusion matrix and ROC curve, in a full-stack scanning app.</p><div class="chips"><span>Python</span><span>Flask</span><span>React.js</span><span>Scikit-learn</span><span>Pandas</span></div><div class="lk"><a href="https://github.com/wajahatayaan56/SafeScan.Pro.git" target="_blank" rel="noopener">View on GitHub ↗</a></div></div>
-<div class="card pj rv" style="--d:.1s"><h3>Raha DMS: Document Management</h3><p>Desktop system with quotation, delivery note, and purchase order modules, auto-numbering and PDF generation, plus a Firebase-backed Product Assistant with offline support and auto-updates.</p><div class="chips"><span>Electron.js</span><span>Node.js</span><span>Firebase</span><span>JavaScript</span></div><div class="lk"><a href="https://github.com/wajuayaan-ui/Raha" target="_blank" rel="noopener">View on GitHub ↗</a></div></div>
-<div class="card pj rv" style="--d:.2s"><h3>Gesture-Controlled Virtual Paint</h3><p>Webcam drawing tool driven by hand gestures. Draw, erase, and pick colors in real time, switching between Random Forest and CNN recognition modes.</p><div class="chips"><span>Python</span><span>OpenCV</span><span>MediaPipe</span><span>TensorFlow</span></div><div class="lk"><a href="https://github.com/wajahatayaan56/Gesture-Controlled-Virtual-Paint-App.git" target="_blank" rel="noopener">View on GitHub ↗</a></div></div>
+<div class="card pj rv"><h3 data-i18n="p1h">SafeScan.Pro: URL Malware Analyzer</h3><p data-i18n="p1p">Final year project. A Random Forest model classifies URLs as malicious or benign using lexical and structural features for real-time analysis, evaluated with a confusion matrix and ROC curve, in a full-stack scanning app.</p><div class="chips"><span>Python</span><span>Flask</span><span>React.js</span><span>Scikit-learn</span><span>Pandas</span></div><div class="lk"><a href="https://github.com/wajahatayaan56/SafeScan.Pro.git" target="_blank" rel="noopener" data-i18n="l_gh">View on GitHub ↗</a></div></div>
+<div class="card pj rv" style="--d:.1s"><h3 data-i18n="p2h">Raha DMS: Document Management</h3><p data-i18n="p2p">Desktop system with quotation, delivery note, and purchase order modules, auto-numbering and PDF generation, plus a Firebase-backed Product Assistant with offline support and auto-updates.</p><div class="chips"><span>Electron.js</span><span>Node.js</span><span>Firebase</span><span>JavaScript</span></div><div class="lk"><a href="https://github.com/wajuayaan-ui/Raha" target="_blank" rel="noopener" data-i18n="l_gh">View on GitHub ↗</a></div></div>
+<div class="card pj rv" style="--d:.2s"><h3 data-i18n="p3h">Gesture-Controlled Virtual Paint</h3><p data-i18n="p3p">Webcam drawing tool driven by hand gestures. Draw, erase, and pick colors in real time, switching between Random Forest and CNN recognition modes.</p><div class="chips"><span>Python</span><span>OpenCV</span><span>MediaPipe</span><span>TensorFlow</span></div><div class="lk"><a href="https://github.com/wajahatayaan56/Gesture-Controlled-Virtual-Paint-App.git" target="_blank" rel="noopener" data-i18n="l_gh">View on GitHub ↗</a></div></div>
 </div></div></section>
 
-<section id="skills"><div class="w"><h2 class="rv">Skills &amp; Certifications</h2><p class="sub rv">Grouped by technical skills, data tools, and credentials.</p>
+<section id="skills"><div class="w"><h2 class="rv" data-i18n="h_skills">Skills &amp; Certifications</h2><p class="sub rv" data-i18n="skills_sub">Grouped by technical skills, data tools, and credentials.</p>
 <div class="grid">
-<div class="card sk rv"><h3>TECHNICAL SKILLS</h3>
-<div class="r"><b>Networking &amp; Security</b><div class="chips"><span>Switching</span><span>Firewalls</span><span>LAN/WAN</span><span>VPN</span><span>Monitoring</span><span>User &amp; directory mgmt</span></div></div>
-<div class="r"><b>IT Support</b><div class="chips"><span>Troubleshooting</span><span>L1 support</span><span>Documentation</span><span>Remote support</span></div></div>
-<div class="r"><b>Operating Systems</b><div class="chips"><span>Windows</span><span>macOS</span><span>Ubuntu</span><span>Kali</span><span>Parrot</span><span>Android</span></div></div>
-<div class="r"><b>ITSM &amp; Productivity</b><div class="chips"><span>ServiceNow</span><span>Jira</span><span>Freshdesk</span><span>Zendesk</span><span>Microsoft 365</span></div></div></div>
-<div class="card sk rv" style="--d:.1s"><h3>DATA &amp; TOOLS</h3>
-<div class="r"><b>Languages</b><div class="chips"><span>Python</span><span>R</span><span>SQL</span><span>C++ (intermediate)</span></div></div>
-<div class="r"><b>BI &amp; Analytics</b><div class="chips"><span>Power BI</span><span>Tableau</span><span>Excel PivotTables</span><span>SPSS</span><span>SAS</span><span>Looker</span><span>QlikView</span></div></div>
-<div class="r"><b>Databases &amp; Cloud</b><div class="chips"><span>MySQL</span><span>Oracle</span><span>SQLite</span><span>MS Access</span><span>SSMS</span><span>Firebase</span><span>Supabase</span></div></div>
-<div class="r"><b>ERP &amp; AI</b><div class="chips"><span>Odoo</span><span>SAP</span><span>NetSuite</span><span>Dynamics 365</span><span>ChatGPT</span><span>Gemini</span><span>Claude</span></div></div></div>
+<div class="card sk rv"><h3 data-i18n="sk1">TECHNICAL SKILLS</h3>
+<div class="r"><b data-i18n="netsec">Networking &amp; Security</b><div class="chips"><span data-i18n="c_switching">Switching</span><span data-i18n="c_firewalls">Firewalls</span><span>LAN/WAN</span><span>VPN</span><span data-i18n="c_monitoring">Monitoring</span><span data-i18n="c_udm">User &amp; directory mgmt</span></div></div>
+<div class="r"><b data-i18n="r_support">IT Support</b><div class="chips"><span data-i18n="c_trouble">Troubleshooting</span><span data-i18n="c_l1">L1 support</span><span data-i18n="c_doc">Documentation</span><span data-i18n="c_remote">Remote support</span></div></div>
+<div class="r"><b data-i18n="r_os">Operating Systems</b><div class="chips"><span>Windows</span><span>macOS</span><span>Ubuntu</span><span>Kali</span><span>Parrot</span><span>Android</span></div></div>
+<div class="r"><b data-i18n="r_itsm">ITSM &amp; Productivity</b><div class="chips"><span>ServiceNow</span><span>Jira</span><span>Freshdesk</span><span>Zendesk</span><span>Microsoft 365</span></div></div></div>
+<div class="card sk rv" style="--d:.1s"><h3 data-i18n="sk2">DATA &amp; TOOLS</h3>
+<div class="r"><b data-i18n="r_lang">Languages</b><div class="chips"><span>Python</span><span>R</span><span>SQL</span><span data-i18n="c_cpp">C++ (intermediate)</span></div></div>
+<div class="r"><b data-i18n="r_bi">BI &amp; Analytics</b><div class="chips"><span>Power BI</span><span>Tableau</span><span>Excel PivotTables</span><span>SPSS</span><span>SAS</span><span>Looker</span><span>QlikView</span></div></div>
+<div class="r"><b data-i18n="r_db">Databases &amp; Cloud</b><div class="chips"><span>MySQL</span><span>Oracle</span><span>SQLite</span><span>MS Access</span><span>SSMS</span><span>Firebase</span><span>Supabase</span></div></div>
+<div class="r"><b data-i18n="r_erp">ERP &amp; AI</b><div class="chips"><span>Odoo</span><span>SAP</span><span>NetSuite</span><span>Dynamics 365</span><span>ChatGPT</span><span>Gemini</span><span>Claude</span></div></div></div>
 </div>
-<h3 class="rv" style="margin:30px 0 12px">Professional Certifications</h3>
+<h3 class="rv" style="margin:30px 0 12px" data-i18n="h_cert">Professional Certifications</h3>
 <div class="grid">
-<div class="card cert rv"><div><h3>Analyzing and Visualizing Data with Microsoft Excel</h3><p>Skillsoft · Jan 2025</p></div><a href="https://drive.google.com/file/d/1C6apKATIZphinL05trFB-Vw0qAuTF5FY/view" target="_blank" rel="noopener">View ↗</a></div>
-<div class="card cert rv" style="--d:.06s"><div><h3>Symantec Certified Specialist: Cyber Security Services</h3><p>Infosys · Jan 2025</p></div><a href="https://drive.google.com/file/d/12hElAEIft4Xv7D4tuGyIIFMzbEU0x0vh/view" target="_blank" rel="noopener">View ↗</a></div>
-<div class="card cert rv" style="--d:.12s"><div><h3>Symantec Certified Specialist: Cyber Security Services</h3><p>Simplilearn · Dec 2024</p></div><a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIxMjEzIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvNzcwMjg5NF81MzI2NDgyMTczNDk4NzA5OTE3NS5wbmciLCJ1c2VybmFtZSI6IldhamFoYXQgQWxpIn0%3D&amp;referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F3736%2FIntroduction-to-Cyber-Security%2Fcertificate%2Fdownload-skillup&amp;%24web_only=true" target="_blank" rel="noopener">View ↗</a></div>
-<div class="card cert rv"><div><h3>CCNA 200-301: Network Fundamentals</h3><p>Simplilearn · Jan 2026</p></div><a href="https://simpli-web.app.link/e/l76AOc7B0Zb" target="_blank" rel="noopener">View ↗</a></div>
-<div class="card cert rv" style="--d:.06s"><div><h3>Artificial Intelligence</h3><p>Simplilearn · Dec 2024</p></div><a href="https://simpli-web.app.link/e/V5PfwTfkMQb" target="_blank" rel="noopener">View ↗</a></div>
-<div class="card cert rv" style="--d:.12s"><div><h3>Microsoft Office 365</h3><p>Edraak · Sep 2025</p></div><a href="https://programs.edraak.org/en/learn/verify-certificate/e6d086fef1ea48849040cb27a3b2811a/?lang=en" target="_blank" rel="noopener">View ↗</a></div>
+<div class="card cert rv"><div><h3>Analyzing and Visualizing Data with Microsoft Excel</h3><p data-i18n="cd1">Skillsoft · Jan 2025</p></div><a href="https://drive.google.com/file/d/1C6apKATIZphinL05trFB-Vw0qAuTF5FY/view" target="_blank" rel="noopener" data-i18n="l_view">View ↗</a></div>
+<div class="card cert rv" style="--d:.06s"><div><h3>Symantec Certified Specialist: Cyber Security Services</h3><p data-i18n="cd2">Infosys · Jan 2025</p></div><a href="https://drive.google.com/file/d/12hElAEIft4Xv7D4tuGyIIFMzbEU0x0vh/view" target="_blank" rel="noopener" data-i18n="l_view">View ↗</a></div>
+<div class="card cert rv" style="--d:.12s"><div><h3>Symantec Certified Specialist: Cyber Security Services</h3><p data-i18n="cd3">Simplilearn · Dec 2024</p></div><a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIxMjEzIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvNzcwMjg5NF81MzI2NDgyMTczNDk4NzA5OTE3NS5wbmciLCJ1c2VybmFtZSI6IldhamFoYXQgQWxpIn0%3D&amp;referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F3736%2FIntroduction-to-Cyber-Security%2Fcertificate%2Fdownload-skillup&amp;%24web_only=true" target="_blank" rel="noopener" data-i18n="l_view">View ↗</a></div>
+<div class="card cert rv"><div><h3>CCNA 200-301: Network Fundamentals</h3><p data-i18n="cd4">Simplilearn · Jan 2026</p></div><a href="https://simpli-web.app.link/e/l76AOc7B0Zb" target="_blank" rel="noopener" data-i18n="l_view">View ↗</a></div>
+<div class="card cert rv" style="--d:.06s"><div><h3>Artificial Intelligence</h3><p data-i18n="cd3">Simplilearn · Dec 2024</p></div><a href="https://simpli-web.app.link/e/V5PfwTfkMQb" target="_blank" rel="noopener" data-i18n="l_view">View ↗</a></div>
+<div class="card cert rv" style="--d:.12s"><div><h3>Microsoft Office 365</h3><p data-i18n="cd5">Edraak · Sep 2025</p></div><a href="https://programs.edraak.org/en/learn/verify-certificate/e6d086fef1ea48849040cb27a3b2811a/?lang=en" target="_blank" rel="noopener" data-i18n="l_view">View ↗</a></div>
 </div></div></section>
 
-<section id="contact"><div class="w"><h2 class="rv">Let’s Work Together</h2><p class="sub rv">I’m open to IT support, network, and data analyst opportunities in Riyadh and remote roles. Send a message and I’ll reply promptly.</p>
+<section id="contact"><div class="w"><h2 class="rv" data-i18n="h_contact">Let’s Work Together</h2><p class="sub rv" data-i18n="contact_sub">I’m open to IT support, network, and data analyst opportunities in Riyadh and remote roles. Send a message and I’ll reply promptly.</p>
 <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
-<form class="card rv" id="f"><div class="fr"><input name="n" placeholder="Full name *" required><input name="e" type="email" placeholder="Email address *" required></div>
-<select name="s"><option>Job Opportunity</option><option>Project Inquiry</option><option>Collaboration</option><option>Other</option></select>
-<textarea name="m" placeholder="Your message *" required></textarea><input class="hp" name="h" tabindex="-1" autocomplete="off" aria-hidden="true">
-<button class="btn p" type="submit">Send Message</button><div class="ok" id="ok"></div></form>
-<div class="cd rv" style="--d:.1s"><a href="mailto:wajahatayaann@gmail.com"><small>EMAIL</small>wajahatayaann@gmail.com</a><a href="tel:+966553400154"><small>PHONE</small>+966 55 340 0154</a><a href="https://www.linkedin.com/in/wajahat-ali-5b796334b" target="_blank" rel="noopener"><small>LINKEDIN</small>linkedin.com/in/wajahat-ali-5b796334b</a><a href="https://github.com/wajahatayaan56" target="_blank" rel="noopener"><small>GITHUB</small>github.com/wajahatayaan56</a></div></div>
-<p class="close rv">Reliable systems, clear data, and support people can count on. Let’s talk.</p></div></section>
-<footer>© 2026 Wajahat Ali · Data Analyst &amp; IT Specialist · Riyadh, KSA</footer>
+<form class="card rv" id="f"><div class="fr"><input name="n" placeholder="Full name *" data-i18n-ph="ph_name" required><input name="e" type="email" placeholder="Email address *" data-i18n-ph="ph_email" required></div>
+<select name="s"><option value="Job Opportunity" data-i18n="o1">Job Opportunity</option><option value="Project Inquiry" data-i18n="o2">Project Inquiry</option><option value="Collaboration" data-i18n="o3">Collaboration</option><option value="Other" data-i18n="o4">Other</option></select>
+<textarea name="m" placeholder="Your message *" data-i18n-ph="ph_msg" required></textarea><input class="hp" name="h" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button class="btn p" type="submit" data-i18n="send">Send Message</button><div class="ok" id="ok"></div></form>
+<div class="cd rv" style="--d:.1s"><a href="mailto:wajahatayaann@gmail.com"><small data-i18n="cl_email">EMAIL</small><bdi dir="ltr">wajahatayaann@gmail.com</bdi></a><a href="tel:+966553400154"><small data-i18n="cl_phone">PHONE</small><bdi dir="ltr">+966 55 340 0154</bdi></a><a href="https://www.linkedin.com/in/wajahat-ali-5b796334b" target="_blank" rel="noopener"><small>LINKEDIN</small><bdi dir="ltr">linkedin.com/in/wajahat-ali-5b796334b</bdi></a><a href="https://github.com/wajahatayaan56" target="_blank" rel="noopener"><small>GITHUB</small><bdi dir="ltr">github.com/wajahatayaan56</bdi></a></div></div>
+<p class="close rv" data-i18n="close">Reliable systems, clear data, and support people can count on. Let’s talk.</p></div></section>
+<footer data-i18n="foot">© 2026 Wajahat Ali · Data Analyst &amp; IT Specialist · Riyadh, KSA</footer>
 
 <script>
 (function(){
@@ -240,16 +263,33 @@ var RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
 try{var t=localStorage.getItem('th');if(t)r.setAttribute('data-theme',t)}catch(e){}
 q('#th').onclick=function(){var n=(r.getAttribute('data-theme')||'light')==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('th',n)}catch(e){}};
 
-/* headline: words rise into place */
-(function(){var h=q('h1'),idx=0;
-function split(node){[].slice.call(node.childNodes).forEach(function(n){
+/* language: EN / AR */
+var L='en',RS={en:['Data Analyst','IT Support Engineer','Network Administrator','Full-Stack Developer'],ar:['محلل بيانات','مهندس دعم فني','مسؤول شبكات','مطوّر Full-Stack']};
+var AR={"n_about": "نبذة", "n_work": "الخبرة", "n_projects": "المشاريع", "n_skills": "المهارات", "n_contact": "تواصل", "logo": "وجاهت<b>.</b>", "tag": "محلل بيانات · متخصص تقنية معلومات", "role_pre": "أنا ", "bio": "<span class=\"hl\" tabindex=\"0\" data-tip=\"بكالوريوس علوم البيانات، الكلية الحكومية الجامعية، فيصل آباد (2025)\">خريج علوم البيانات</span> بخبرة عملية تمتد لسنتين في الدعم الفني لتقنية المعلومات وإدارة الشبكات وتحليل البيانات. أبني لوحات معلومات Power BI وExcel، وأُبقي الشبكات والمستخدمين في حالة عمل مستمرة، وجاء ترتيبي ضمن أفضل 4 من بين 96 موظف دعم فني في Sybrid.", "b_proj": "عرض المشاريع", "b_contact": "تواصل معي", "f_loc": "الرياض، السعودية", "f_iqama": "الإقامة: قابلة للنقل", "f_lang": "الإنجليزية · الأردية/الهندية · العربية (أساسي)", "st1": "من أصل 96 موظف دعم فني", "st1s": "المركز الرابع في Sybrid تقديرًا للأداء والتفاني", "st2": "سنوات من الخبرة العملية", "st3": "وظائف في 3 قطاعات", "st4": "شهادات", "h_about": "نبذة عني", "about_sub": "أعمل حيث يلتقي الدعم الفني لتقنية المعلومات بالبيانات. بصفتي خريج علوم البيانات (بكالوريوس، <a href=\"https://gcuf.edu.pk/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--a);font-weight:600\">الكلية الحكومية الجامعية، فيصل آباد</a>، 2025)، قدّمت الدعم للمستخدمين، وبنيت الشبكات، وحوّلت الأرقام الخام إلى لوحات معلومات في بيئات الشركات والرعاية الصحية والاتصالات.", "s1h": "الدعم الفني لتقنية المعلومات", "s1p": "استكشاف أخطاء الأجهزة والبرمجيات وشبكات LAN/WAN والطابعات من المستوى الأول (L1)، مع حل التذاكر وفق اتفاقيات مستوى الخدمة (SLA) وتوثيق واضح.", "s2h": "تحليل البيانات", "s2p": "Power BI وExcel (الجداول المحورية) وSQL وPython لإعداد لوحات المعلومات والتقارير والرؤى.", "netsec": "الشبكات والأمن", "s3p": "إعداد المحوّلات والموجّهات وجدران الحماية وVPN، إضافةً إلى إدارة المستخدمين والأدلة (Directory).", "s4h": "حل المشكلات التقنية", "s4p": "إرشاد المستخدمين خطوة بخطوة، وتصعيد الحالات بشكل سليم إلى فرق المستوى الثاني والثالث (L2/L3).", "s5h": "تطوير التطبيقات المتكاملة (Full-Stack)", "s5p": "تطبيقات سطح المكتب والويب باستخدام Electron.js وFlask وReact وFirebase.", "s6h": "التصميم ثلاثي الأبعاد والعرض", "s6p": "مجسمات ثلاثية الأبعاد واقعية وتخطيطات جاهزة للعملاء باستخدام 3D CAD وSketchUp وCanva.", "h_work": "الخبرة العملية", "work_sub": "أربع وظائف في قطاعات التجزئة وتقنية معلومات الشركات والرعاية الصحية والاتصالات.", "j1t": "مهندس تقنية معلومات", "j1d": "يناير 2026 – الآن", "j1c": "Aran Cucine الرياض · دوام كامل", "j1a": "إعداد وصيانة شبكة المكتب وWi-Fi وأنظمة المراقبة بالكاميرات (CCTV).", "j1b": "تقديم الدعم الفني للأجهزة والبرمجيات لموظفي المعرض والمكتب، وإدارة الطابعات والأجهزة الطرفية لتقليل فترات التعطل.", "j1c2": "صيانة الموقع الإلكتروني والمتجر الإلكتروني وإدارة حسابات التواصل الاجتماعي.", "j1d2": "تنفيذ تصاميم ثلاثية الأبعاد واقعية وتخطيطات جاهزة للعرض لعدة مشاريع عملاء في الموعد المحدد.", "l_aran": "زيارة Aran Cucine ↖", "j2t": "مهندس دعم فني لتقنية المعلومات", "j2d": "أغسطس – نوفمبر 2025", "j2c": "Sybrid Private Limited (إحدى شركات مجموعة Lakson) · لاهور", "j2a": "<b>حصلت على المركز الرابع من بين 96</b> موظف دعم فني تقديرًا للأداء والتفاني.", "j2b": "حل تذاكر مكتب المساعدة مع الالتزام بمستهدفات اتفاقيات مستوى الخدمة (SLA).", "j2c2": "تقديم دعم المستوى الأول (L1) للأجهزة والبرمجيات وشبكات LAN وWAN، بما في ذلك الدعم عن بُعد عبر الهاتف والبريد الإلكتروني وأدوات الوصول عن بُعد.", "j2d2": "تصعيد المشكلات غير المحلولة إلى المستويين الثاني والثالث (L2/L3) وتوثيق الحوادث والحلول وحالات التصعيد.", "l_syb": "زيارة Sybrid ↖", "l_exp": "خطاب الخبرة ↖", "j3t": "متدرب دعم فني", "j3d": "فبراير – أبريل 2025", "j3c": "مجمع الكويت الطبي (KMC) · سكردو", "j3a": "دعم أجهزة الحاسوب والطابعات وأجهزة الشبكات في بيئة مستشفى.", "j3b": "المساعدة في رقمنة سجلات المرضى، مما حسّن سهولة الوصول وموثوقية أنظمة المعلومات الصحية.", "j3c2": "إدارة أمن البريد الإلكتروني وتحديثات البرمجيات، والمساعدة في تركيب أنظمة CCTV وصيانتها.", "j4t": "متدرب مهندس شبكات", "j4d": "يونيو – سبتمبر 2024", "j4c": "منظمة الاتصالات الخاصة (SCO) · سكردو", "j4a": "تركيب وإعداد الموجّهات والمحوّلات وأجهزة الشبكات لبنية LAN/WAN التحتية.", "j4b": "المساعدة في نشر شبكة الألياف الضوئية وصيانتها، بما في ذلك الإعداد والتوجيه.", "j4c2": "إدارة المستخدمين والصلاحيات والأدلة (Directories)، ودعم إعداد جدار الحماية وVPN للوصول الآمن عن بُعد.", "l_sco": "زيارة SCO ↖", "c_networking": "الشبكات", "c_ecom": "التجارة الإلكترونية", "c_switching": "التبديل", "c_firewalls": "جدران الحماية", "c_monitoring": "المراقبة", "c_udm": "إدارة المستخدمين والأدلة", "c_trouble": "استكشاف الأخطاء", "c_l1": "دعم L1", "c_doc": "التوثيق", "c_remote": "الدعم عن بُعد", "c_cpp": "C++ (متوسط)", "c_emailsec": "أمن البريد الإلكتروني", "c_routers": "الموجّهات", "c_switches": "المحوّلات", "c_fiber": "الألياف الضوئية", "c_firewall": "جدار الحماية", "h_proj": "أبرز المشاريع", "proj_sub": "تطبيقات وأدوات تعلّم آلي مبنية من البداية إلى النهاية.", "p1h": "SafeScan.Pro: محلل البرمجيات الخبيثة في الروابط", "p1p": "مشروع التخرج. نموذج Random Forest يصنّف الروابط إلى خبيثة أو آمنة بالاعتماد على خصائص لغوية وهيكلية للتحليل الفوري، ويُقيَّم بمصفوفة الارتباك ومنحنى ROC، ضمن تطبيق متكامل للفحص.", "p2h": "Raha DMS: نظام إدارة المستندات", "p2p": "نظام سطح مكتب يضم وحدات عروض الأسعار وإشعارات التسليم وأوامر الشراء، مع ترقيم تلقائي وإنشاء ملفات PDF، إضافةً إلى مساعد منتجات مدعوم بـ Firebase يعمل دون اتصال مع تحديثات تلقائية.", "p3h": "الرسم الافتراضي بالإيماءات", "p3p": "أداة رسم عبر كاميرا الويب تعمل بإيماءات اليد. الرسم والمسح واختيار الألوان لحظيًا، مع التبديل بين وضعي التعرّف Random Forest وCNN.", "l_gh": "عرض على GitHub ↖", "h_skills": "المهارات والشهادات", "skills_sub": "مصنفة حسب المهارات التقنية وأدوات البيانات والشهادات.", "sk1": "المهارات التقنية", "sk2": "البيانات والأدوات", "r_support": "الدعم الفني", "r_os": "أنظمة التشغيل", "r_itsm": "إدارة خدمات تقنية المعلومات والإنتاجية", "r_lang": "لغات البرمجة", "r_bi": "ذكاء الأعمال والتحليلات", "r_db": "قواعد البيانات والسحابة", "r_erp": "أنظمة ERP والذكاء الاصطناعي", "h_cert": "الشهادات المهنية", "cd1": "Skillsoft · يناير 2025", "cd2": "Infosys · يناير 2025", "cd3": "Simplilearn · ديسمبر 2024", "cd4": "Simplilearn · يناير 2026", "cd5": "Edraak · سبتمبر 2025", "l_view": "عرض ↖", "h_contact": "لنعمل معًا", "contact_sub": "أنا منفتح على فرص الدعم الفني لتقنية المعلومات والشبكات وتحليل البيانات في الرياض وعن بُعد. أرسل لي رسالة وسأردّ عليك سريعًا.", "o1": "فرصة عمل", "o2": "استفسار عن مشروع", "o3": "تعاون", "o4": "أخرى", "send": "إرسال الرسالة", "cl_email": "البريد الإلكتروني", "cl_phone": "الهاتف", "close": "أنظمة موثوقة، وبيانات واضحة، ودعم يمكن الاعتماد عليه. لنتحدث.", "foot": "© 2026 وجاهت علي · محلل بيانات ومتخصص تقنية معلومات · الرياض، السعودية", "h1": "أحوّل أنظمة تقنية المعلومات والبيانات إلى <em>نتائج موثوقة</em>", "title": "وجاهت علي | محلل بيانات ومتخصص تقنية معلومات", "desc": "الملف المهني لوجاهت علي: الدعم الفني لتقنية المعلومات والشبكات وتحليل البيانات في الرياض.", "ph_name": "الاسم الكامل *", "ph_email": "البريد الإلكتروني *", "ph_msg": "رسالتك *"};
+var OKT={en:'Thanks, your email app is opening. I’ll be in touch soon.',ar:'شكرًا لك، يتم الآن فتح تطبيق البريد. سأتواصل معك قريبًا.'};
+var h1=q('#h1'),h1en=h1.innerHTML,wi=0,descEn=(q('meta[name=description]')||{}).content,titleEn=document.title;
+function h1split(node){[].slice.call(node.childNodes).forEach(function(n){
  if(n.nodeType===3){var f=document.createDocumentFragment();
   n.textContent.split(/(\s+)/).forEach(function(w){if(!w)return;
    if(/^\s+$/.test(w)){f.appendChild(document.createTextNode(' '));return}
-   var o=document.createElement('span');o.className='wd';var i=document.createElement('span');i.textContent=w;i.style.transitionDelay=(.15+idx++*.07)+'s';o.appendChild(i);f.appendChild(o)});
+   var o=document.createElement('span');o.className='wd';var i=document.createElement('span');i.textContent=w;i.style.transitionDelay=(.15+wi++*.07)+'s';o.appendChild(i);f.appendChild(o)});
   n.parentNode.replaceChild(f,n)}
- else if(n.nodeType===1)split(n)})}
-split(h);requestAnimationFrame(function(){requestAnimationFrame(function(){h.classList.add('go')})})})();
+ else if(n.nodeType===1)h1split(n)})}
+function h1run(){h1.classList.remove('go');h1.innerHTML=(L==='ar')?AR.h1:h1en;wi=0;h1split(h1);requestAnimationFrame(function(){requestAnimationFrame(function(){h1.classList.add('go')})})}
+function applyLang(l){
+ L=l;r.setAttribute('lang',l);r.setAttribute('dir',l==='ar'?'rtl':'ltr');
+ if(l==='ar'&&!document.getElementById('arfont')){var lk=document.createElement('link');lk.id='arfont';lk.rel='stylesheet';lk.href='https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap';document.head.appendChild(lk)}
+ qa('[data-i18n]').forEach(function(e){var k=e.getAttribute('data-i18n');if(e._en===undefined)e._en=e.innerHTML;e.innerHTML=(l==='ar'&&AR[k]!==undefined)?AR[k]:e._en});
+ qa('[data-i18n-ph]').forEach(function(e){var k=e.getAttribute('data-i18n-ph');if(e._ph===undefined)e._ph=e.placeholder;e.placeholder=(l==='ar')?AR[k]:e._ph});
+ document.title=(l==='ar')?AR.title:titleEn;var md=q('meta[name=description]');if(md)md.content=(l==='ar')?AR.desc:descEn;
+ qa('[data-n]').forEach(function(el){if(el._pe===undefined)el._pe=el.dataset.p||'';if(el.dataset.par!==undefined)el.dataset.p=(l==='ar')?el.dataset.par:el._pe;
+  el.textContent=(el.dataset.p||'')+(el._cd?el.dataset.n:'0')+(el.dataset.s||'')});
+ rs=RS[l];ri=0;ci=0;del=false;if(RM&&typeof ty!=='undefined'&&ty)ty.textContent=rs[0];
+ q('#lg').textContent=(l==='ar')?'EN':'العربية';
+ h1run()}
+q('#lg').onclick=function(){var n=L==='ar'?'en':'ar';applyLang(n);try{localStorage.setItem('lg',n)}catch(e){}};
+(function(){var sv=null;try{sv=localStorage.getItem('lg')}catch(e){}
+ applyLang(sv||((navigator.language||'').toLowerCase().indexOf('ar')===0?'ar':'en'))})();
 
 /* chips cascade inside each card */
 qa('.chips').forEach(function(c){[].slice.call(c.children).forEach(function(s,i){s.style.setProperty('--i',i)})});
@@ -264,14 +304,14 @@ qa('.rv').forEach(function(e){io.observe(e)});
 
 /* counters */
 qa('[data-n]').forEach(function(el){el.textContent=(el.dataset.p||'')+'0'+(el.dataset.s||'')});
-var co=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;co.unobserve(e.target);
+var co=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;co.unobserve(e.target);e.target._cd=1;
  var el=e.target,n=+el.dataset.n,p=el.dataset.p||'',s=el.dataset.s||'',t0=null,D=1100;
  if(RM){el.textContent=p+n+s;return}
- (function f(ts){if(t0===null)t0=ts;var k=Math.min(1,(ts-t0)/D);el.textContent=p+Math.round(n*(1-Math.pow(1-k,3)))+s;if(k<1)requestAnimationFrame(f)})(performance.now())})},{threshold:.6});
+ (function f(ts){if(t0===null)t0=ts;var k=Math.min(1,(ts-t0)/D);el.textContent=(el.dataset.p||'')+Math.round(n*(1-Math.pow(1-k,3)))+s;if(k<1)requestAnimationFrame(f)})(performance.now())})},{threshold:.6});
 qa('[data-n]').forEach(function(e){co.observe(e)});
 
 /* role typewriter */
-var rs=['Data Analyst','IT Support Engineer','Network Administrator','Full-Stack Developer'],ri=0,ci=0,del=false,ty=q('#ty');
+var rs=RS[L],ri=0,ci=0,del=false,ty=q('#ty');
 if(RM){ty.textContent=rs[0]}else{(function tick(){var w=rs[ri];ci+=del?-1:1;ty.textContent=w.slice(0,ci);var d=del?35:75;if(!del&&ci===w.length){del=true;d=1400}else if(del&&ci===0){del=false;ri=(ri+1)%rs.length;d=300}setTimeout(tick,d)})()}
 
 /* scroll: progress bar, active link, nav shadow, timeline line, photo drift */
@@ -372,6 +412,6 @@ q('#th').addEventListener('click',function(){setTimeout(colors,50)});
 })();
 
 /* contact form */
-q('#f').onsubmit=function(e){e.preventDefault();var f=e.target;if(f.h.value)return;var b='Name: '+f.n.value+'\nEmail: '+f.e.value+'\n\n'+f.m.value;location.href='mailto:wajahatayaann@gmail.com?subject='+encodeURIComponent(f.s.value+' - '+f.n.value)+'&body='+encodeURIComponent(b);q('#ok').textContent='Thanks, your email app is opening. I’ll be in touch soon.'};
+q('#f').onsubmit=function(e){e.preventDefault();var f=e.target;if(f.h.value)return;var b='Name: '+f.n.value+'\nEmail: '+f.e.value+'\n\n'+f.m.value;location.href='mailto:wajahatayaann@gmail.com?subject='+encodeURIComponent(f.s.value+' - '+f.n.value)+'&body='+encodeURIComponent(b);q('#ok').textContent=OKT[L]};
 })();
 </script></body></html>
