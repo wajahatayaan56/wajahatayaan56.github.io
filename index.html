@@ -219,6 +219,20 @@ section{padding:68px 0 0}.sub{margin-bottom:24px}.orb,.hint{display:none}.hero{p
 .car{height:290px}.ring3{width:150px;height:210px}.ph{transform:rotateY(calc(var(--i)*120deg)) translateZ(160px)}@keyframes scan2{from{transform:translate3d(0,-44px,0)}to{transform:translate3d(0,215px,0)}}
 .term{padding:18px}#tp{font-size:13px;min-height:170px}.cert2{padding:10px}.cin{padding:22px 16px 16px}
 }
+@media(max-width:700px){
+.hero{padding:92px 0 36px}.hero .hc{width:calc(100% - 24px);padding:30px 22px 28px}
+.lq{transform:none;width:100%;border-radius:28px}.lq::before,.lq::after{filter:blur(26px)}
+.hc .hi,.hc h1,.hc .role,.hc .bio,.hc .dsb,.hc .cta{transform:none;translate:none}.hc>*:not(.lq){max-width:100%}
+.hi{font-size:12px;padding:6px 13px;margin-bottom:14px}
+h1{font-size:clamp(26px,7.6vw,42px);line-height:1.05;margin-bottom:12px}
+h1 .ln:nth-child(1) span{text-shadow:0 1px 0 var(--ex),0 2px 0 var(--ex),0 3px 0 var(--ex),0 4px 0 var(--ex),0 14px 22px rgba(0,0,0,.4)}
+.role{font-size:18px;min-height:28px}.bio{font-size:15px;line-height:1.65;margin:12px 0 18px}
+.dsb{width:auto;max-width:100%;font-size:12.5px;padding:8px 14px 8px 10px;margin:0 0 16px}
+.cta{display:grid;grid-template-columns:1fr 1fr;gap:10px}.hb{justify-content:center;padding:13px 10px;font-size:13.5px;border-radius:14px}
+}
+.ph img{filter:none}.pi{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s}.pi.on{opacity:1}.ph .mono{transition:opacity .5s}
+.ph::before{background:linear-gradient(transparent 55%,rgba(6,11,26,.6)),repeating-linear-gradient(transparent 0 2px,rgba(76,155,255,.08) 2px 3px)}
+@media(max-width:700px){.ph{box-shadow:0 0 18px var(--glow);will-change:transform}.ph::after{box-shadow:none}.ring3{will-change:transform;animation-duration:30s}}
 </style></head><body>
 <canvas id="gl" aria-hidden="true"></canvas><div id="bar"></div>
 <nav><div class="w"><i class="ni"></i><button id="mb" aria-label="Menu" aria-expanded="false" aria-controls="mp"><span class="bx"><i></i><i></i><i></i></span><b id="ml">Menu</b></button><a class="l" href="#about">About</a><a class="l" href="#work">Work</a><a class="l" href="#projects">Projects</a><a class="l" href="#skills">Skills</a><a class="l" href="#certs">Certs</a><a class="l" href="#contact">Contact</a><button id="th" aria-label="Toggle dark mode"><svg class="sn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="mn" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg></button></div></nav>
@@ -374,8 +388,10 @@ s='<svg viewBox="0 0 200 46"><path d="M20 16H180" stroke="var(--k)" stroke-width
 s='<svg viewBox="0 0 200 40">';for(i=0;i<6;i++){var x=22+i*31;s+='<circle cx="'+x+'" cy="20" r="12" fill="var(--k)" stroke="var(--k)" stroke-width="2"><animate attributeName="fill-opacity" values=".1;1;1;.1" keyTimes="0;.12;.8;1" dur="5s" begin="'+i*.45+'s" repeatCount="indefinite"/></circle><path d="M'+(x-5)+' 20l3.5 4 6.5-8" fill="none" stroke="#060b1a" stroke-width="2.6" stroke-linecap="round"><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.12;.8;1" dur="5s" begin="'+i*.45+'s" repeatCount="indefinite"/></path>'}$('#sv4').innerHTML=s+'</svg>'})();
 /* nav glow + photos */
 addEventListener('pointermove',function(e){$('nav').style.setProperty('--nx',(e.clientX/innerWidth*100)+'%')},{passive:true});
-var PH=['pic1','pic2','pic3'];window.imgFix=function(im){var e=['jpeg','png','webp','JPG','JPEG','PNG'],k=+(im.dataset.k||0);if(k<e.length){im.dataset.k=k+1;im.src=im.dataset.n+'.'+e[k]}else im.style.display='none'};
-(function(){var c=$('#car'),h='<div class="ring3">';for(var i=0;i<3;i++){h+='<div class="ph" style="--i:'+i+'">'+(PH[i]?'<img src="'+PH[i]+'.jpg" data-n="'+PH[i]+'" alt="Wajahat Ali" onerror="imgFix(this)">':'<div class="mono">WA<small>pic'+(i+1)+'</small></div>')+'<span class="tg">id-0'+(i+1)+' // verified</span></div>'}c.innerHTML=h+'</div>';
+var PN=['pic1','pic2','pic3'],EX=['jpg','jpeg','png','webp','JPG','JPEG','PNG'];
+(function(){var c=$('#car'),h='<div class="ring3" id="r3">';for(var i=0;i<3;i++){h+='<div class="ph" style="--i:'+i+'"><div class="mono">WA<small>pic'+(i+1)+'</small></div><span class="tg">id-0'+(i+1)+' // verified</span></div>'}c.innerHTML=h+'</div>';
+[].forEach.call(c.querySelectorAll('.ph'),function(f,i){var done=0;EX.forEach(function(x){var im=new Image();im.decoding='async';im.onload=function(){if(done)return;done=1;im.className='pi';im.alt='Wajahat Ali';f.insertBefore(im,f.firstChild);requestAnimationFrame(function(){im.classList.add('on');var m=f.querySelector('.mono');if(m)m.style.opacity=0})};im.src=PN[i]+'.'+x})});
+if('IntersectionObserver' in window){var r3=$('#r3');new IntersectionObserver(function(es){r3.style.animationPlayState=es[0].isIntersecting?'running':'paused'}).observe(c)}
 var s="> whoami\nwajahat_ali // data analyst + it engineer\n> load --stack\npower_bi · python · sql · networking · firebase\n> status\nbuilding reliable systems, clear data, smart tools",tp=$('#tp'),k=0;
 function tw(){tp.textContent=s.slice(0,k++);if(k<=s.length)setTimeout(tw,32)}
 new IntersectionObserver(function(es,o){if(es[0].isIntersecting){o.disconnect();if(RM)tp.textContent=s;else tw()}}).observe(tp)})();
